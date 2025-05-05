@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>Prajeeta Pathare - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <h1>Prajeeta Pathare</h1>
+    <img src="my_image.jpeg" alt="My Photo" class="profile">
+    <p>
+        As a First-Year student, I am excited to embark on my academic and professional journey.
+        This portfolio showcases my interests, skills, and early accomplishments as I am currently developing 
+        my expertise in robotics and computer science. I am eager to learn, grow, and take on
+        new challenges that will shape my future.
+    </p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#education">Education</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#certificates">Certificates</a>
+  <a href="#interests">Interests</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about-me">
+  <h3>About Me</h3>
+  <p id="about-content">
+      I am a motivated and enthusiastic first-year student pursuing a B-Tech in Computer 
+      Science Engineering. With a keen interest in <strong>robotics</strong>, 
+      <strong>photography</strong>, and <strong>coding</strong>, I am eager to explore opportunities 
+      that allow me to expand my knowledge and gain practical experience.
+  </p>
+  <button onclick="changeAboutMe()">Click to Learn More</button>
+</section>
+
+<section id="education">
+  <h3>Education</h3>
+  <p>
+      <strong>MIT Academy of Engineering</strong><br>
+      2024 - 2028<br>
+      B-Tech, CGPA: 8.00
+  </p>
+  <p>
+      <strong>MIT Jr College</strong><br>
+      2022 - 2024<br>
+      11th & 12th, Boards: 80%, CET: 90 percentile
+  </p>
+</section>
+
+
+<section id="skills">
+  <h3>Skills</h3>
+  <ul>
+      <li>Web Development       80%</li>
+      <li>Programming Languages     70%</li>
+      <li>Communication        80%</li>
+      <li>Time Management        85%</li>
+      <li>Teamwork      85%</li>
+      <li>Emotional Intelligence        90%</li>
+      <li>Creativity        70%</li>
+  </ul>
+  <button onclick="toggleSkills()">Skills Details</button>
+  <div id="skills-details" style="display: none;">
+      <p>Full-stack development in HTML, CSS, JavaScript; proficient in Python and C++.</p>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3>AI Assistant</h3>
+      <p>A GPT-powered chatbot assistant built with Python and Flask.</p>
+    </div>
+    <div class="card">
+      <h3>Portfolio Website</h3>
+      <p>This modern digital portfolio, made with HTML, CSS, JS.</p>
+    </div>
+  </div>
+</section>
+
+<section id="certificates">
+  <h2>Certificates</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3>linux tutorial</h3>
+      <p>Great learning • 2024</p>
+      <a href="Prajeeta_Pathare linux tutorial.jpg">certificate</a>
+    </div>
+    <div class="card">
+      <h3>Frontend Development</h3>
+      <p>Great learning• 2024</p>
+      <a href="Prajeeta_Pathare frontend development HTML.jpg">certificate</a>
+    </div>
+  </div>
+</section>
+
+<section id="interests">
+  <h3>Additional Interests</h3>
+  <p>
+      I am also passionate about:
+      <ul>
+          <li>Photography</li>
+          <li>Creative Writing</li>
+          <li>Coding Challenges and Hackathons</li>
+          <li>Volunteering in Community Projects</li>
+          <li>Learning New Technologies</li>
+      </ul>
+  </p>
+</section>
+
+<section id="contact">
+  <h3>Contact Information</h3>
+  <p>Phone: +91 9518385458</p>
+  <p>Location: Charholi Bk, Pune</p>
+  <p>Email: <a href="mailto:pathare.prajeeta@gmail.com">pathare.prajeeta@gmail.com</a></p>
+  <p>LinkedIn:<a href="https://www.linkedin.com/in/prajeeta-pathare-6a593a333/">LinkedIn</a></p>
+  <p>Resume:<a href="prajeeta_pathare_cv.pdf">Resume</a></p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Prajeeta Pathare. All rights reserved.</p>
+</footer>
+
+<script>
+  function changeAboutMe() {
+    const aboutContent = document.getElementById("about-content");
+    aboutContent.innerHTML = "I have developed a passion for technology and innovation, aiming to create impactful solutions in the field of robotics and artificial intelligence.Beyond academics, I enjoy playing throwball and chess , which help me stay creative and balanced. I believe in lifelong learning, and I am committed to continuously improving my knowledge and abilities. My goal is to build a strong foundation during my studies and gradually shape my career through internships, projects, and networking opportunities.";
+}
+
+function toggleSkills() {
+    const skillsDetails = document.getElementById("skills-details");
+    if (skillsDetails.style.display === "none") {
+        skillsDetails.style.display = "block";
+    } else {
+        skillsDetails.style.display = "none";
+    }
+}
+// Scroll to section with smooth behavior
+document.querySelectorAll('nav a').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const section = document.querySelector(this.getAttribute('href'));
+    section.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+</script>
+</body>
+</html>
